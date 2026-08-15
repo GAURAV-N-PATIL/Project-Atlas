@@ -1,0 +1,60 @@
+# --- Python / FastAPI (backend) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+backend/.env
+
+# --- Alembic (leave versions tracked, ignore local db state) ---
+*.sqlite3
+*.db
+
+# --- Node / Next.js (frontend) ---
+node_modules/
+.next/
+out/
+.turbo/
+frontend/.env.local
+frontend/.env*.local
+next-env.d.ts
+*.tsbuildinfo
+.eslintcache
+
+# --- Docker / infra ---
+*.pid
+docker-compose.override.yml
+
+# --- MinIO / Postgres local volumes (if bind-mounted instead of named volumes) ---
+minio-data/
+pgdata/
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Env files (never commit real secrets, only .env.example) ---
+.env
+.env.local
+.env.*.local
